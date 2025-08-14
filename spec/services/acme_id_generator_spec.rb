@@ -35,7 +35,7 @@ RSpec.describe AcmeIdGenerator do
 
     it 'generates valid Luhn check digit' do
       id = subject
-      digits = id[4, 8] # Extract the 8 digits after ACME
+      digits = id[4, 8]
       check_digit = id[-1].to_i
       expected_check = Luhn.checksum(digits)
       
